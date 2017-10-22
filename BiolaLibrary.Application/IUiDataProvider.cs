@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BiolaLibrary.Application
 {
-    public class Class1
+    public interface IUiDataProvider
     {
+
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.Application", "BiolaLibrary.Application\BiolaLibrary.Application.csproj", "{3FB16D77-597F-484B-BC84-8F60614E7924}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.Model", "BiolaLibrary.Model\BiolaLibrary.Model.csproj", "{0EA1733F-5300-4F53-8185-4D5611337DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.SqlServerDatabaseMapper", "BiolaLibrary.SqlServerDatabaseMapper\BiolaLibrary.SqlServerDatabaseMapper.csproj", "{78F4689D-C9AE-445B-8B46-560A143608C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3FB16D77-597F-484B-BC84-8F60614E7924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FB16D77-597F-484B-BC84-8F60614E7924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB16D77-597F-484B-BC84-8F60614E7924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EA1733F-5300-4F53-8185-4D5611337DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA1733F-5300-4F53-8185-4D5611337DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA1733F-5300-4F53-8185-4D5611337DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA1733F-5300-4F53-8185-4D5611337DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F4689D-C9AE-445B-8B46-560A143608C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F4689D-C9AE-445B-8B46-560A143608C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F4689D-C9AE-445B-8B46-560A143608C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F4689D-C9AE-445B-8B46-560A143608C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
