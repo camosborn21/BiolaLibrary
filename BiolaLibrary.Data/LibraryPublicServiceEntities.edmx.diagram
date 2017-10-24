@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d24a1bf314894b4fb59f4a4c8000b010" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.CountDataPoint" Width="1.5" PointX="5.25" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.CountUseArea" Width="1.5" PointX="5.25" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.CountUseBarcode" Width="1.5" PointX="5.25" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.CountUseEntry" Width="1.5" PointX="3" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.InventoryBarcode" Width="1.5" PointX="5.25" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.InventoryEntry" Width="1.5" PointX="3" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.InventoryQueue" Width="1.5" PointX="6" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.InventoryQueueProgress" Width="1.5" PointX="13.25" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PatronCountDataType" Width="1.5" PointX="3" PointY="53.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PatronCountEntry" Width="1.5" PointX="3" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.SearchEntry" Width="1.5" PointX="8" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.SearchType" Width="1.5" PointX="5.75" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShelfReadingEntry" Width="1.5" PointX="9" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShelfReadingQueue" Width="1.5" PointX="8" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShelfReadingQueueProgress" Width="1.5" PointX="14.25" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShelvingEntry" Width="1.5" PointX="3" PointY="59.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShiftingEntry" Width="1.5" PointX="8" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShiftingQueue" Width="1.5" PointX="11" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShiftingQueueProgress" Width="1.5" PointX="14.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Area" Width="1.5" PointX="1.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Column" Width="1.5" PointX="3.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Level" Width="1.5" PointX="1.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Region" Width="1.5" PointX="1.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Shelf" Width="1.5" PointX="5.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.ShelfFace" Width="1.5" PointX="1.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.DatabaseLog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.AssignmentRateHistory" Width="1.5" PointX="13.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Department" Width="1.5" PointX="6.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Employee" Width="1.5" PointX="3" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EmployeeInformation" Width="1.5" PointX="3" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EmployeeInfoType" Width="1.5" PointX="0.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Job" Width="1.5" PointX="8.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.JobAssignment" Width="1.5" PointX="11" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.SystemAccess" Width="1.5" PointX="11" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.SystemRequired" Width="1.5" PointX="16" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Entity" Width="1.5" PointX="0.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EntityIdentification" Width="1.5" PointX="3" PointY="49.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EntityIDType" Width="1.5" PointX="0.75" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.IDCharacteristic" Width="1.5" PointX="8.25" PointY="54.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.IDCharacteristicType" Width="1.5" PointX="6" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Person" Width="1.5" PointX="12" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PersonType" Width="1.5" PointX="9.75" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Property" Width="1.5" PointX="6" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PropertyType" Width="1.5" PointX="3.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.Address" Width="1.5" PointX="6.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.AddressType" Width="1.5" PointX="6.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.CountryRegion" Width="1.5" PointX="2.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EmailAddress" Width="1.5" PointX="6" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EmailType" Width="1.5" PointX="3.75" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.EntityAddress" Width="1.5" PointX="9" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PhoneNumber" Width="1.5" PointX="9" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.PhoneType" Width="1.5" PointX="6.75" PointY="63.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.StateProvince" Width="1.5" PointX="4.5" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryPublicServicesModel.SystemsOverview" Width="1.5" PointX="8.75" PointY="60.625" IsExpanded="true" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountDataPoint_PatronCountDataType_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountDataPoint_PatronCountEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountUseArea_Area_AreaId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountUseArea_CountUseEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountUseBarcode_CountUseEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_CountUseEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryBarcode_InventoryEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryEntry_Shelf_FinishingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryEntry_Shelf_StartingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryQueueProgress_InventoryEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryQueue_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryQueue_Shelf_EndShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryQueue_Shelf_StartShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_InventoryQueueProgress_InventoryQueue_QueueId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_PatronCountEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SearchEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SearchEntry_SearchType_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingEntry_Shelf_FinishingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingEntry_Shelf_StartingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingQueueProgress_ShelfReadingEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingQueue_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingQueue_Shelf_FinishShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingQueue_Shelf_StartShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfReadingQueueProgress_ShelfReadingQueue_QueueId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelvingEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingEntry_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingEntry_Shelf_PlaceFinishingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingEntry_Shelf_PlaceStartingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingEntry_Shelf_PullFinishingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingEntry_Shelf_PullStartingShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingQueueProgress_ShiftingEntry_EntryId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingQueue_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingQueue_Shelf_FinishShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingQueue_Shelf_StartShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShiftingQueueProgress_ShiftingQueue_QueueId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Area_Region_RegionId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_ShelfFace_Area_AreaId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Column_ShelfFace_ShelfFaceId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Shelf_Column_ColumnId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Region_Level_LevelId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_AssignmentRateHistory_JobAssignment_AssignmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Job_Department_DepartmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Employee_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EmployeeInformation_EmployeeInfoType_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EmployeeInformation_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_JobAssignment_Job_JobId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SystemRequired_Job_JobID" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_JobAssignment_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SystemAccess_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SystemAccess_System_SystemId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_SystemRequired_System_SystemId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EmailAddress_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EntityAddress_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EntityIdentification_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Person_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_PhoneNumber_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Property_Entity_EntityId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EntityIdentification_IDType" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_IDCharacteristic_EntityIdentification_EntityIdentificationId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_IDCharacteristic_IDCharacteristicType_CharacteristicTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Person_PersonType_PersonType" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Property_PropertyType_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_Address_StateProvince_StateProvinceId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EntityAddress_Address_AddressId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EntityAddress_AddressType_AddressTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_StateProvince_CountryRegion_CountryRegionCode" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_EmailAddress_EmailType_EmailTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryPublicServicesModel.FK_PhoneNumber_PhoneType_PhoneTypeId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

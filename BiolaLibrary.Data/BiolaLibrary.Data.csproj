@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32952291-0636-4E5A-9E50-19ABA3293C2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiolaLibrary.Data</RootNamespace>
+    <AssemblyName>BiolaLibrary.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Area.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssignmentRateHistory.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Column.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountDataPoint.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryRegion.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountUseArea.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountUseBarcode.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountUseEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLog.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailAddress.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInformation.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfoType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAddress.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityIdentification.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityIDType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDCharacteristic.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDCharacteristicType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryBarcode.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryQueue.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryQueueProgress.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobAssignment.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryPublicServiceEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryPublicServiceEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryPublicServiceEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryPublicServiceEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryPublicServiceEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PatronCountDataType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatronCountEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneNumber.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchType.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shelf.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShelfFace.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShelfReadingEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShelfReadingQueue.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShelfReadingQueueProgress.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShelvingEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftingEntry.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftingQueue.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftingQueueProgress.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StateProvince.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAccess.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemRequired.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsOverview.cs">
+      <DependentUpon>LibraryPublicServiceEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="LibraryPublicServiceEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryPublicServiceEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LibraryPublicServiceEntities.edmx.diagram">
+      <DependentUpon>LibraryPublicServiceEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibraryPublicServiceEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryPublicServiceEntities.edmx</DependentUpon>
+      <LastGenOutput>LibraryPublicServiceEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibraryPublicServiceEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryPublicServiceEntities.edmx</DependentUpon>
+      <LastGenOutput>LibraryPublicServiceEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

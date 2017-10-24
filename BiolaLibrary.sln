@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.Model", "Biola
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.SqlServerDatabaseMapper", "BiolaLibrary.SqlServerDatabaseMapper\BiolaLibrary.SqlServerDatabaseMapper.csproj", "{78F4689D-C9AE-445B-8B46-560A143608C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.Data", "BiolaLibrary.Data\BiolaLibrary.Data.csproj", "{32952291-0636-4E5A-9E50-19ABA3293C2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiolaLibrary.Console", "BiolaLibrary.Console\BiolaLibrary.Console.csproj", "{F97B0CD0-C2B9-49C9-94C3-E608DCA62562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{78F4689D-C9AE-445B-8B46-560A143608C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78F4689D-C9AE-445B-8B46-560A143608C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78F4689D-C9AE-445B-8B46-560A143608C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32952291-0636-4E5A-9E50-19ABA3293C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32952291-0636-4E5A-9E50-19ABA3293C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32952291-0636-4E5A-9E50-19ABA3293C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32952291-0636-4E5A-9E50-19ABA3293C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97B0CD0-C2B9-49C9-94C3-E608DCA62562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97B0CD0-C2B9-49C9-94C3-E608DCA62562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97B0CD0-C2B9-49C9-94C3-E608DCA62562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97B0CD0-C2B9-49C9-94C3-E608DCA62562}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

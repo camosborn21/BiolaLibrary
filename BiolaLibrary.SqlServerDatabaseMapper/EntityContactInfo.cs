@@ -47,6 +47,33 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 		public Address Address { get; set; }
 		public DateTime LastUpdate { get; set; }
 	}
-	
+	public class EmailType
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+	}
 
+	public class EmailAddress
+	{
+		public int Id { get; set; }
+		public EmailType EmailType { get; set; }
+		public string Address { get; set; }
+		public bool Primary { get; set; }
+		public DateTime LastUpdate { get; set; }
+	}
+
+	public class PhoneType
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+	}
+
+	public class PhoneNumber
+	{
+		public int Id { get; set; }
+		public PhoneType PhoneType { get; set; }
+		public string Number { get; set; }
+		public bool Primary { get; set; }
+		public DateTime LastUpdate { get; set; }
+	}
 }
