@@ -41,6 +41,7 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 		public IEnumerable<PersonalID> FormsOfID { get; set; }
 		public IEnumerable<PhoneNumber> PhoneNumbers { get; set; }
 		public IEnumerable<EmailAddress> EmailAddresses { get; set; }
+		public IEnumerable<EntityAddress> EntityAddresses { get; set; }
 		public IEnumerable<PersonalProperty> Properties { get; set; }
 	}
 }

@@ -101,6 +101,8 @@ namespace BiolaLibrary.Model
 				RaisePropertyChanged(SuffixPropertyName);
 			}
 		}
+
+		//[10/26/2017 18:11] camerono: This may need to be changed so it doesn't RaisePropertyChanged since it's updated by saving it to the database.
 		public const string LastUpdatePropertyName = "LastUpdate";
 		private DateTime _lastUpdate;
 		public DateTime LastUpdate

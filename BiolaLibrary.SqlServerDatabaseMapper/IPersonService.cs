@@ -5,8 +5,8 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 	{
 		IList<Person> GetPeople();
 		Person GetPerson(int personId);
-		void Update(Person person);
-		void NewPerson(Person person);
+		void Update(ref Person person);
+		Person NewPerson(Person person);
 		void DeletePerson(Person person);
 	}
 }
