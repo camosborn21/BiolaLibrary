@@ -10,8 +10,8 @@ namespace BiolaLibrary.Application
     {
 	    IList<Person> GetPeople();
 	    Person GetPerson(int personId);
-	    void UpdatePerson(ref Person person);
+	    Person UpdatePerson(Person person);
 	    Person NewPerson(Person person);
-	    void DeletePerson(ref Person person);
+	    void DeletePerson(Person person);
     }
 }

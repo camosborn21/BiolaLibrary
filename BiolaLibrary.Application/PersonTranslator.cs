@@ -214,7 +214,7 @@ namespace BiolaLibrary.Application
 				LastUpdate = i.LastUpdate,
 				Type = GetIdTypeFromDto(i),
 				Characteristics = GetIdCharacteristicsFromDto(i)
-			});
+			}).ToList();
 			return new ObservableCollection<PersonalID>(formsOfId);
 		}
 
@@ -226,7 +226,7 @@ namespace BiolaLibrary.Application
 				Value = c.Value,
 				LastUpdate = c.LastUpdate,
 				Type = GetIdCharacteristicTypeFromDto(c)
-			});
+			}).ToList();
 			return new ObservableCollection<IDCharacteristic>(idCharacteristics);
 		}
 
@@ -316,7 +316,7 @@ namespace BiolaLibrary.Application
 					Value = i.Value,
 					LastUpdate = i.LastUpdate,
 					IDType = GetIdTypeFromModel(i.Type),
-					Characteristics = GetIdCharacteristicsFromModel(i.Characteristics)
+					Characteristics = GetIdCharacteristicsFromModel(i.Characteristics) 
 				});
 			return formsOfId;
 		}
@@ -333,6 +333,9 @@ namespace BiolaLibrary.Application
 
 		private IEnumerable<SqlServerDatabaseMapper.IDCharacteristic> GetIdCharacteristicsFromModel(ObservableCollection<IDCharacteristic> modelCharacteristics)
 		{
+			if (modelCharacteristics == null)
+				return new List<SqlServerDatabaseMapper.IDCharacteristic>();
+
 			IEnumerable<SqlServerDatabaseMapper.IDCharacteristic> idCharacteristics =
 				modelCharacteristics.Select(c => new SqlServerDatabaseMapper.IDCharacteristic()
 				{

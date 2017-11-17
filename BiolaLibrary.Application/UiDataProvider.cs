@@ -26,12 +26,13 @@ namespace BiolaLibrary.Application
 
 		public Person GetPerson(int personId)
 		{
-			throw new System.NotImplementedException();
+			return PersonTranslator.Instance.CreateModel(_personServiceClient.GetPerson(personId));
 		}
 
-		public void UpdatePerson(ref Person person)
+		public Person UpdatePerson(Person person)
 		{
-			throw new System.NotImplementedException();
+			return PersonTranslator.Instance.UpdateModel(person,
+				_personServiceClient.Update(PersonTranslator.Instance.CreateDto(person)));
 		}
 
 		public Person NewPerson(Person person)
@@ -39,7 +40,7 @@ namespace BiolaLibrary.Application
 			return PersonTranslator.Instance.CreateModel(_personServiceClient.NewPerson(PersonTranslator.Instance.CreateDto(person)));
 		}
 
-		public void DeletePerson(ref Person person)
+		public void DeletePerson(Person person)
 		{
 			throw new System.NotImplementedException();
 		}
