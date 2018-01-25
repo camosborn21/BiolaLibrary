@@ -17,37 +17,37 @@ namespace BiolaLibrary.Console
 	{
 		public static void TestUpdatePerson()
 		{
-			//IUiDataProvider dataProvider = new UiDataProvider(new PersonService());
-			//Person person = dataProvider.GetPerson(11);
+			IUiDataProvider dataProvider = new UiDataProvider(new PersonService());
+			Person person = dataProvider.GetPerson(1);
 
-			//person.FormsOfId.Add(new Model.PersonalID()
-			//{
-			//	Type = new Model.IDType() { Id = 3 },
-			//	Value = "1385141730",
-			//	Characteristics = new ObservableCollection<IDCharacteristic>()
-			//	{
-			//		new IDCharacteristic()
-			//		{
-			//			Type = new Model.IDCharacteristicType()
-			//			{
-			//				Id = 4
-			//			},
-			//			Value = "USMC"
-			//		}
-			//	}
-			//});
-			//dataProvider.UpdatePerson(person);
+			person.FormsOfId.Add(new Model.PersonalID()
+			{
+				Type = new Model.IDType() { Id = 6 },
+				Value = "1385141730",
+				Characteristics = new ObservableCollection<IDCharacteristic>()
+				{
+					new IDCharacteristic()
+					{
+						Type = new Model.IDCharacteristicType()
+						{
+							Id = 3
+						},
+						Value = "USMC"
+					}
+				}
+			});
+			dataProvider.UpdatePerson(person);
 
-			//System.Console.WriteLine(person.FirstName + " " + person.LastName + " Last Updated: " + person.LastUpdate + " EntityId: " + person.EntityId);
-			//System.Console.WriteLine("|Forms Of Id:");
-			//foreach (Model.PersonalID personalId in person.FormsOfId)
-			//{
-			//	System.Console.WriteLine("|| Personal Id: " + personalId.Id + "     Id Type: " + personalId.Type.Id + " - " + personalId.Type.Name + "    Id Value: " + personalId.Value + "    Last Update: " + personalId.LastUpdate);
-			//	foreach (Model.IDCharacteristic personalIdCharacteristic in personalId.Characteristics)
-			//	{
-			//		System.Console.WriteLine("||| ID Characteristic: " + personalIdCharacteristic.Id + "    Characteristic Type: " + personalIdCharacteristic.Type.Id + "-" + personalIdCharacteristic.Type.Name + "    Characteristic Value: " + personalIdCharacteristic.Value + "    Last Update: " + personalIdCharacteristic.LastUpdate);
-			//	}
-			//}
+			System.Console.WriteLine(person.FirstName + " " + person.LastName + " Last Updated: " + person.LastUpdate + " EntityId: " + person.EntityId);
+			System.Console.WriteLine("|Forms Of Id:");
+			foreach (Model.PersonalID personalId in person.FormsOfId)
+			{
+				System.Console.WriteLine("|| Personal Id: " + personalId.Id + "     Id Type: " + personalId.Type.Id + " - " + personalId.Type.Name + "    Id Value: " + personalId.Value + "    Last Update: " + personalId.LastUpdate);
+				foreach (Model.IDCharacteristic personalIdCharacteristic in personalId.Characteristics)
+				{
+					System.Console.WriteLine("||| ID Characteristic: " + personalIdCharacteristic.Id + "    Characteristic Type: " + personalIdCharacteristic.Type.Id + "-" + personalIdCharacteristic.Type.Name + "    Characteristic Value: " + personalIdCharacteristic.Value + "    Last Update: " + personalIdCharacteristic.LastUpdate);
+				}
+			}
 
 		}
 
@@ -108,9 +108,9 @@ namespace BiolaLibrary.Console
 		}
 		static void Main(string[] args)
 		{
-			TestAddPerson();
-			TestGetPeople();
-			//TestUpdatePerson();
+			//TestAddPerson();
+			//TestGetPeople();
+			TestUpdatePerson();
 			System.Console.ReadLine();
 		}
 

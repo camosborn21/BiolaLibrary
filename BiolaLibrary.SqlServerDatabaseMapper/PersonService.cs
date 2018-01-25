@@ -352,8 +352,8 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 
 				_libraryPublicServicesEntities.SaveChanges();
 
-				//Update the return objects "Last Update" property
-				person.LastUpdate = updatePersonEntity.ModifiedDate;
+				//Update the return objects "Last Update" property -- IS THIS NECERSSARY? I dont think so. It will pull on the GetPerson return
+				//person.LastUpdate = updatePersonEntity.ModifiedDate;
 			}
 
 
@@ -369,6 +369,8 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 			{
 				bool newId = false;
 				Data.EntityIdentification updateId;
+
+				//[1/25/2018 15:08] camerono: If this is a brand new ID
 				if (personalId.Id < 1)
 				{
 					updateId = new EntityIdentification()
@@ -701,7 +703,57 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 
 		private bool UpdateProperties(Person person)
 		{
-			throw new NotImplementedException();
+			bool databaseUpdated = false;
+			foreach (PersonalProperty personalProperty in person.Properties)
+			{
+				bool newProperty = false;
+				Data.Property updateProperty;
+
+				//[1/25/2018 15:32] camerono: Check if this is a new property
+				if (personalProperty.Id < 1)
+				{
+					updateProperty = new Data.Property()
+					{
+						rowguid = Guid.NewGuid()
+					};
+					databaseUpdated = true;
+					newProperty = true;
+				}
+				else
+				{
+					updateProperty = _libraryPublicServicesEntities.Properties.Single(p => p.PropertyId == personalProperty.Id);
+				}
+
+				if (updateProperty.EntityId != person.EntityId)
+				{
+					updateProperty.EntityId = person.EntityId;
+					updateProperty.ModifiedDate = DateTime.Now;
+					personalProperty.LastUpdate = updateProperty.ModifiedDate;
+					databaseUpdated = true;
+				}
+
+				if (updateProperty.TypeId != personalProperty.Type.Id)
+				{
+					updateProperty.TypeId = personalProperty.Type.Id;
+					updateProperty.ModifiedDate = DateTime.Now;
+					personalProperty.LastUpdate = updateProperty.ModifiedDate;
+					databaseUpdated = true;
+				}
+
+				if (updateProperty.Value != personalProperty.Value)
+				{
+					updateProperty.Value = personalProperty.Value;
+					updateProperty.ModifiedDate = DateTime.Now;
+					personalProperty.LastUpdate = updateProperty.ModifiedDate;
+					databaseUpdated = true;
+				}
+
+				if (newProperty)
+					_libraryPublicServicesEntities.Properties.Add(updateProperty);
+
+			}
+
+			return databaseUpdated;
 		}
 
 
