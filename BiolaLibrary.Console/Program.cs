@@ -22,8 +22,8 @@ namespace BiolaLibrary.Console
 
 			person.FormsOfId.Add(new Model.PersonalID()
 			{
-				Type = new Model.IDType() { Id = 6 },
-				Value = "1385141730",
+				Type = new Model.IDType() { Id = 9 },
+				Value = "1454718",
 				Characteristics = new ObservableCollection<IDCharacteristic>()
 				{
 					new IDCharacteristic()
@@ -56,7 +56,7 @@ namespace BiolaLibrary.Console
 			//11
 
 			IUiDataProvider dataProvider = new UiDataProvider(new PersonService());
-			Person person = dataProvider.GetPerson(11);
+			Person person = dataProvider.GetPerson(1);
 			System.Console.WriteLine(person.FirstName + " " + person.LastName + " Last Updated: " + person.LastUpdate + " EntityId: " + person.EntityId);
 			System.Console.WriteLine("|Forms Of Id:");
 			foreach (Model.PersonalID personalId in person.FormsOfId)
@@ -89,13 +89,13 @@ namespace BiolaLibrary.Console
 		{
 			Person addPerson = new Person
 			{
-				FirstName = "Cameron",
+				FirstName = "Larissa",
 				LastName = "Osborn",
-				MiddleName = "Howard",
+				MiddleName = "Ann",
 				PersonType = new PersonType()
 				{
 					Id = 2,
-					Name = "Biola Employee"
+					Name = "Individual"
 				}
 			};
 
@@ -103,14 +103,62 @@ namespace BiolaLibrary.Console
 			//addPerson = dataService.NewPerson(addPerson);
 			IUiDataProvider dataProvider = new UiDataProvider(new PersonService());
 			addPerson = dataProvider.NewPerson(addPerson);
+			addPerson.EmailAddresses.Add(new Model.EmailAddress() {
+				Address = "larissa.a.osborn@gmail.com",
+				EmailType = new Model.EmailType(){Id = 1,Name = "Personal"},
+				Primary = true
+			});
 
+			addPerson.PhoneNumbers.Add(new Model.PhoneNumber()
+			{
+				Number = "425.283.7469",
+				Primary = true,
+				PhoneType = new Model.PhoneType()
+				{
+					Id = 1,
+					Name = "Cell"
+				}
+			});
+
+			addPerson.FormsOfId.Add(new Model.PersonalID()
+			{
+				Type = new Model.IDType() { Id = 9 },
+				Value = "1454718",
+				Characteristics = new ObservableCollection<IDCharacteristic>()
+				{
+					new IDCharacteristic()
+					{
+						Type = new Model.IDCharacteristicType()
+						{
+							Id = 5
+						},
+						Value = "Staff ID"
+					}
+				}
+			});
+			//[1/28/2018 20:51] camerono: Left off here
+			//addPerson.Addresses.Add(new Model.EntityAddress()
+			//{
+			//	Name = "Mailing Address",
+			//	AddressType = new Model.AddressType() { Id=3,Name="Home"},
+			//	Address = new Model.Address() {Line1 = "1900 Brookdale Ave", City = "La Habra", StateProvince = new Model.StateProvince() { } }
+			//});
 			System.Console.WriteLine(addPerson.EntityId);
 		}
+
+		public static void TestDeletePerson()
+		{
+			IUiDataProvider dataProvider = new UiDataProvider(new PersonService());
+			dataProvider.DeletePersonById(2);
+		}
+
 		static void Main(string[] args)
 		{
 			//TestAddPerson();
 			//TestGetPeople();
-			TestUpdatePerson();
+			//TestUpdatePerson();
+			//GetPerson();
+			//TestDeletePerson();
 			System.Console.ReadLine();
 		}
 

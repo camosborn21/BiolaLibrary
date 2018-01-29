@@ -4,6 +4,7 @@ using System.Data.Entity;
 using BiolaLibrary.Data;
 using System;
 using System.Data;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -13,9 +14,81 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 	{
 		private readonly LibraryPublicServicesEntities _libraryPublicServicesEntities = new LibraryPublicServicesEntities();
 
+		public void DeletePersonById(int entityId)
+		{
+			//[1/28/2018 13:18] camerono: Run 'GetPerson' to ensure that the delete routine has the most up to date information on entity collections
+			Person delPerson = GetPerson(entityId);
+			DeletePerson(delPerson);
+		}
+
 		public void DeletePerson(Person person)
 		{
-			throw new NotImplementedException();
+
+			//[1/28/2018 13:18] camerono: Run 'GetPerson' to ensure that the delete routine has the most up to date information on entity collections
+			Person delPerson = GetPerson(person.EntityId);
+
+			//[1/25/2018 17:48] camerono: Delete Forms of ID
+			foreach (PersonalID personalId in delPerson.FormsOfID)
+			{
+				//[1/28/2018 13:16] camerono: Check that the ID is commited to the database
+				if (personalId.Id > 0)
+				{
+					//[1/28/2018 13:16] camerono: Delete all ID Characteristics associated with an ID
+					foreach (IDCharacteristic personalIdCharacteristic in personalId.Characteristics)
+					{
+						if (personalIdCharacteristic.Id > 0)
+							_libraryPublicServicesEntities.IDCharacteristics.Remove(
+								_libraryPublicServicesEntities.IDCharacteristics.Single(IdC => IdC.CharacteristicId == personalIdCharacteristic.Id));
+					}
+					_libraryPublicServicesEntities.EntityIdentifications.Remove(
+						_libraryPublicServicesEntities.EntityIdentifications.Single(EId => EId.EntityIdentificationId == personalId.Id));
+				}
+			}
+
+			//[1/25/2018 17:49] camerono: Delete Email Addresses
+			foreach (EmailAddress emailAddress in delPerson.EmailAddresses)
+			{
+				if (emailAddress.Id > 0)
+					_libraryPublicServicesEntities.EmailAddresses.Remove(
+						_libraryPublicServicesEntities.EmailAddresses.Single(eA => eA.EmailId == emailAddress.Id));
+			}
+
+			//[1/25/2018 17:49] camerono: Delete Phone Numbers
+			foreach (PhoneNumber phoneNumber in delPerson.PhoneNumbers)
+			{
+				if (phoneNumber.Id > 0)
+					_libraryPublicServicesEntities.PhoneNumbers.Remove(
+						_libraryPublicServicesEntities.PhoneNumbers.Single(pN => pN.PhoneId == phoneNumber.Id));
+			}
+
+			//[1/25/2018 17:49] camerono: Delete Physical Addresses
+			foreach (EntityAddress entityAddress in delPerson.EntityAddresses)
+			{
+				if (entityAddress.AddressId > 0)
+				{
+					_libraryPublicServicesEntities.Addresses.Remove(
+						_libraryPublicServicesEntities.Addresses.Single(a => a.AddressId == entityAddress.AddressId));
+					_libraryPublicServicesEntities.EntityAddresses.Remove(
+						_libraryPublicServicesEntities.EntityAddresses.Single(eA => eA.AddressId == entityAddress.AddressId));
+				}
+			}
+
+			//[1/25/2018 17:49] camerono: Delete Properties
+			foreach (PersonalProperty property in delPerson.Properties)
+			{
+				if (property.Id > 0)
+					_libraryPublicServicesEntities.Properties.Remove(
+						_libraryPublicServicesEntities.Properties.Single(p => p.PropertyId == property.Id));
+			}
+
+			//[1/25/2018 17:49] camerono: Delete Person
+			_libraryPublicServicesEntities.People.Remove(
+				_libraryPublicServicesEntities.People.Single(p => p.EntityId == delPerson.EntityId));
+
+			//[1/28/2018 16:08] camerono: Delete Entity Record
+			_libraryPublicServicesEntities.Entities.Remove(
+				_libraryPublicServicesEntities.Entities.Single(e => e.EntityId == delPerson.EntityId));
+			_libraryPublicServicesEntities.SaveChanges();
 		}
 
 		public IList<Person> GetPeople()
@@ -29,9 +102,9 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 			}).ToList();
 		}
 
-		public Person GetPerson(int personId)
+		public Person GetPerson(int personEntityId)
 		{
-			Data.Person foundPersonEntity = _libraryPublicServicesEntities.People.Single(p => p.EntityId == personId);
+			Data.Person foundPersonEntity = _libraryPublicServicesEntities.People.Single(p => p.EntityId == personEntityId);
 			return new Person()
 			{
 				EntityId = foundPersonEntity.EntityId,
@@ -537,7 +610,7 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 				if (newNumber)
 					_libraryPublicServicesEntities.PhoneNumbers.Add(updateNumber);
 			}
-			
+
 
 			return databaseUpdated;
 		}
@@ -615,7 +688,7 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 				Data.EntityAddress updateAddress;
 				if (personEntityAddress.AddressId < 1)
 				{
-					updateAddress = new Data.EntityAddress() {rowguid = Guid.NewGuid(),EntityId = person.EntityId,AddressTypeId = personEntityAddress.AddressType.Id};
+					updateAddress = new Data.EntityAddress() { rowguid = Guid.NewGuid(), EntityId = person.EntityId, AddressTypeId = personEntityAddress.AddressType.Id };
 					databaseUpdated = true;
 					newAddress = true;
 
@@ -690,7 +763,7 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 					databaseUpdated = true;
 				}
 
-				
+
 				if (newAddress)
 					_libraryPublicServicesEntities.EntityAddresses.Add(updateAddress);
 
@@ -699,7 +772,7 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 			return databaseUpdated;
 		}
 
-		
+
 
 		private bool UpdateProperties(Person person)
 		{

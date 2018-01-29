@@ -13,5 +13,6 @@ namespace BiolaLibrary.Application
 	    Person UpdatePerson(Person person);
 	    Person NewPerson(Person person);
 	    void DeletePerson(Person person);
+	    void DeletePersonById(int entityId);
     }
 }

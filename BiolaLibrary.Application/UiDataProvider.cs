@@ -42,7 +42,12 @@ namespace BiolaLibrary.Application
 
 		public void DeletePerson(Person person)
 		{
-			throw new System.NotImplementedException();
+			_personServiceClient.DeletePerson(PersonTranslator.Instance.CreateDto(person));
+		}
+
+		public void DeletePersonById(int entityId)
+		{
+			_personServiceClient.DeletePersonById(entityId);
 		}
 	}
 }

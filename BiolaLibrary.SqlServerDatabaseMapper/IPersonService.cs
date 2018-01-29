@@ -8,5 +8,6 @@ namespace BiolaLibrary.SqlServerDatabaseMapper
 		Person Update(Person person);
 		Person NewPerson(Person person);
 		void DeletePerson(Person person);
+		void DeletePersonById(int entityId);
 	}
 }
